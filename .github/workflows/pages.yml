@@ -29,11 +29,10 @@ jobs:
       - name: Install Marp CLI
         run: npm i -g @marp-team/marp-cli
 
-      # 例: slides.md を index.html にして dist/ に出す
       - name: Build HTML
         run: |
           mkdir -p dist
-          marp slides.md -o dist/index.html
+          marp cursor-dev-efficiency.md -o dist/index.html
 
       # dist/ を Pages 用 artifact としてアップロード
       - name: Upload artifact
